@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="appoint.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Online Doctor Appointment Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="appointmentDate">Appointment Date:</label>
+                <input type="date" class="form-control" id="appointmentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="appointmentTime">Appointment Time:</label>
+                <input type="time" class="form-control" id="appointmentTime" required>
+            </div>
+            <div class="form-group">
+                <label for="doctor">Doctor:</label>
+                <select class="form-control" id="doctor" required>
+                    <option value="">Select a doctor</option>
+                    <option value="Dr.Ram Charan">Dr.Ram Charan</option>
+                    <option value="Dr.Amaan">Dr.Amaan</option>
+                    <option value="Dr.Ravi">Dr.Ravi</option>
+                    <option value="Dr.Munna bhai">Dr.munna bhai</option>
+                    <option value="Dr.Strange">Dr.Strange</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="appointmentType">Appointment Type:</label>
+                <select class="form-control" id="appointmentType" required>
+                    <option value="">Select an appointment type</option>
+                    <option value="Consultation">Consultation</option>
+                    <option value="Checkup">Checkup</option>
+                    <option value="Follow-up">Follow-up</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Enter any additional information"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <script>
+            document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const appointmentDate = document.getElementById('appointmentDate').value;
+        const appointmentTime = document.getElementById('appointmentTime').value;
+        const doctor = document.getElementById('doctor').value;
+        const appointmentType = document.getElementById('appointmentType').value;
+        const message = document.getElementById('message').value;
+
+        // Display an alert message
+        alert(`Dear ${name},\n\nThank you for choosing our clinic for your healthcare needs. Your appointment with ${doctor} on ${appointmentDate} at ${appointmentTime} has been fixed. We will send you a confirmation email at ${email}.\n\nBest regards,\nThe Clinic Team`);
+
+        // Clear the form fields
+        document.getElementById('appointmentForm').reset();
+    });
+            </script>
+        </form>
+    </div>
+    
+
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const appointmentDate = document.getElementById('appointmentDate').value;
+        const appointmentTime = document.getElementById('appointmentTime').value;
+        const doctor = document.getElementById('doctor').value;
+        const appointmentType = document.getElementById('appointmentType').value;
+        const message = document.getElementById('message').value;
+
+        // Display an alert message
+        alert(`Dear ${name},\n\nThank you for choosing our clinic for your healthcare needs. Your appointment with ${doctor} on ${appointmentDate} at ${appointmentTime} has been fixed. We will send you a confirmation email at ${email}.\n\nBest regards,\nThe Clinic Team`);
+
+        // Clear the form fields
+        document.getElementById('appointmentForm').reset();
+    });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
